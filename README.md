@@ -1,11 +1,5 @@
 # 🤓 Full Stack Insights
 **A Flask-based web application designed as a comprehensive educational resource for full-stack web development.**
-- HTML
-- CSS
-- Python
-- Flask
-- FontAwesome
-
 
 ## 🧰 Technology Stack
 - **Framework:** Flask (Python web framework)
