@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block title %}Server Error - 500{% endblock %}
+
+{% block content %}
+<h1>⚠️ Internal Server Error (500)</h1>
+
+<div class="demo-section">
+    <h2>🔧 What Happened?</h2>
+    <div class="error">
+        <p>An internal server error occurred while processing your request. This is likely due to:</p>
+        <ul>
+            <li><strong>Parameter processing error</strong> - Invalid data caused a processing exception</li>
+            <li><strong>Template rendering issue</strong> - Problem with displaying the result</li>
+            <li><strong>Server configuration</strong> - Internal Flask application error</li>
+        </ul>
+    </div>
+</div>
+
+<div class="demo-section">
+    <h2>🔗 Safe Navigation</h2>
+    
+    <div class="example-links">
+        <a href="/" class="example-link">🏠 Return to Home</a>
+        <a href="/query-demo" class="example-link">🔍 Simple Query Demo</a>
+        <a href="/request-info" class="example-link">📊 Request Information</a>
+    </div>
+</div>
+
+<div class="demo-section">
+    <h2>🛠️ For Developers</h2>
+    <p>If you're developing this application:</p>
+    <ul>
+        <li>Check the Flask console for detailed error messages</li>
+        <li>Verify all template variables are properly defined</li>
+        <li>Ensure parameter validation is handling edge cases</li>
+        <li>Review the route function for potential exceptions</li>
+    </ul>
+</div>
+{% endblock %}
