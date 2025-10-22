@@ -4,7 +4,6 @@
     width: 100%;
     min-height: 30vh;
     background: #45855D;
-    /* background: linear-gradient(135deg, rgba(69, 133, 93, 1) 0%, rgba(61, 173, 111, 1) 50%,  #34495e 100%); */
     background: linear-gradient(135deg, rgba(69, 133, 93, 1) 0%, #34495e 100%);
     display: flex;
     align-items: center;

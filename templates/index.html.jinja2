@@ -1,6 +1,6 @@
 {% extends 'base.html.jinja2' %}
 
-{% block title %}FrontEnd Insights: Landing{% endblock title %}
+{% block title %}Full Stack Insights: Landing{% endblock title %}
 
 
 {% block header  %}
@@ -19,6 +19,7 @@
                 <div>
                 <h2 class="section-title">Learning Resources</h2>
                     <div class="cards-grid">
+                    {# HTML #}
                         <article class="card">
                             <div class="card-icon">
                             <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -28,11 +29,12 @@
                             </div>
                             <h3 class="card-title">HTML</h3>
                             <p class="card-description">Learn how to create robust, 
-                        future-proof HTML structures that work seamlessly across all devices and assistive technologies while 
-                        maintaining clean, maintainable code that follows modern web standards.</p>
+                                future-proof HTML structures that work seamlessly across all devices and assistive technologies while 
+                                maintaining clean, maintainable code that follows modern web standards.
+                            </p>
                             {# <a href="{{ url_for('language_dashboard', language='html') }}" class="card-link">Learn More</a> #}
                         </article>
-
+                    {# CSS #}
                         <article class="card">
                             <div class="card-icon">
                             <svg width="48" height="48" fill="white"  viewBox="4 2 25 25" xmlns="http://www.w3.org/2000/svg">
@@ -44,7 +46,7 @@
                             <p class="card-description">Elevate your CSS expertise beyond basic styling to master advanced techniques that create scalable, maintainable, and performant stylesheets.</p>
                             {# <a href="{{ url_for('language_dashboard', language='css') }}" class="card-link">Learn More</a> #}
                         </article>
-
+                    {# JavaScript #}
                         <article class="card">
                             <div class="card-icon">
                             <svg width="48" height="48" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
@@ -57,7 +59,7 @@
                         web applications and complex software systems.</p>
                             {# <a href="{{ url_for('language_dashboard', language='javascript') }}" class="card-link">Learn More</a> #}
                         </article>
-
+                    {# Python #}
                         <article class="card">
                             <div class="card-icon">
                             <svg width="48" height="48" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
@@ -70,8 +72,6 @@
                             syntax and basic data structures to explore more sophisticated features and programming paradigms within the Python language</p>
                             {# <a href="{{ url_for('language_dashboard', language='python') }}" class="card-link">Learn More</a> #}
                         </article>
-
-
                     </div>
                 </div>
 

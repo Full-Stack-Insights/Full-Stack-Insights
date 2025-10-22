@@ -1,32 +1,5 @@
 @import url('./home-banner.css');
 @import url('./home-cards.css');
-/* @import url('./topnav.css');
-@import url('./sidebar.css');
-@import url('./dash-main-area.css');
-@import url('./main-content.css'); */
-
-/***************************** Concept Styles *****************************/
-/*Concept Info */
-/* @import url('./concepts/all-concepts-intro.css'); */
-
-
-/***************************** HTML Concept Styles *****************************/
-/* @import url('./concepts/html-concepts/html-concept-info.css');
-@import url('./concepts/html-concepts/html-concept-container.css'); */
-
-/* Concept Code */
-/* @import url('./component-styles/html-code-box.css'); */
-/* Concept Miniwebsite */
-/* @import url('./component-styles/miniwebsite.css'); */
-
-
-
-
-/***************************** CSS Concept Styles *****************************/
-/* @import url('./concepts/css-concepts/css-concept.css'); */
-
-
-
 @import url('./footer.css');
 
 * {
@@ -60,11 +33,3 @@ a {
     margin: 0;
     padding: 0;
 }
-
-
-/* Dashboard Container */
-/* .dashboard-container {
-    display: flex;
-    margin-top: 70px;
-    min-height: calc(100vh - 70px);
-} */

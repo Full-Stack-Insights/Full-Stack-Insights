@@ -1,7 +1,6 @@
 /* Footer Styles */
 .site-footer {
     background: linear-gradient(135deg, rgba(69, 133, 93, 1) 0%, #34495e 100%);
-    /* background: linear-gradient(135deg, rgba(69, 133, 93, 1) 0%, rgba(61, 173, 111, 1) 50%, rgba(69, 133, 93, 1) 100%); */
     color: white;
     padding: 3rem 0 1rem;
 }
