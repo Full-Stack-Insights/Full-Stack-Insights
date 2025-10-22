@@ -1,23 +1,18 @@
-# Jinja Template Flow
+# 🪭 Jinja Template Flow
 
-### Template System
-- **Base Template:** Provides common HTML structure with header, main content blocks, and a comprehensive footer
-- **Index Template:** Extends base template with a hero banner and learning resource cards
-- **Template Inheritance:** Uses Jinja2's {% extends %} pattern for maintainable code
+## 📰 Template System
+- **Base Template[base.html.jinja2](./templates/base.html.jinja2):** Provides common HTML structure with header, main content blocks, and a comprehensive footer
 
 
-
-
-- app.py                 # 
-# Extends [base.html.jinja2](./base.html)
-- [`├── index.html.jinja2`](./index.html)
+### 📩 Extends [base.html.jinja2](./templates/base.html.jinja2)
+- [`├── index.html.jinja2`](./templates/index.html.jinja2)
 
 
 
 
 
 
-# Static Files
+### 📑 Static Files
 ```
 ├── static/              # Static assets directory
 │   ├── css/            # Stylesheets

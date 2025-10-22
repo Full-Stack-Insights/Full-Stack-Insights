@@ -10,17 +10,17 @@
 
 
 ## 🪄 Functionality
-### Main Flask application entry point `app.py`
+### Main Flask application entry point [`app.py`](./app.py)
 - Simple Flask application with a single route (/)
 - Serves the homepage with navigation and overview
 - Configured for development with debug mode enabled for live reloading
 - Clear console output with startup information
 - Standard Flask project structure for easy expansion
 
-### Template System
+### 📰 Template System
 **Uses Jinja2's {% extends %} pattern for maintainable code**
 
-### Current Implementation
+### ⚙️ Current Implementation
 - Basic Flask application structure
 - Clean, responsive homepage design
 - Modular CSS architecture

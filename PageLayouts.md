@@ -1,6 +1,6 @@
-# App Pages Layouts
+# 🪟 App Pages Layouts
 
-### Homepage `index.html.jinja2`
+### 🏡 Homepage [`index.html.jinja2`](./templates/index.html.jinja2)
 - Hero Banner: Prominent "Full Stack Insights" branding
 - Learning Resource Cards: Four main technology sections:
     - HTML5
