@@ -7,17 +7,15 @@
 {% endblock header %}
 
 {% block main %}
-<main class="main-dashboard-content">
     <div class="dashboard-container">
     {% include 'dashboard/sidebar.html.jinja2' %}
-        
-        {# {% if request.args.get('concept') != None  %}<!-- Conditional content includes based on request parameters -->
-            {% include 'dashboard/concept.html.jinja2' %}
-        {% else %}<!-- Conditional content includes based on request parameters -->
-            {% include 'dashboard/lang_home.html.jinja2' %}
-
-        {% endif %} #}
-
+    
+    <div class="main-content-area">
+        {% include 'dashboard/lang_home.html.jinja2' %}
     </div>
-</main>
+    </div>
 {% endblock main %}
+
+
+
+

@@ -1,7 +1,16 @@
 /* Main Content */
 .dashboard-container{
+    display: flex;
     min-height: 100vh;
     background: #f1f5f9;
+}
+
+/* Main content area (next to sidebar) */
+.main-content-area {
+    flex: 1;
+    padding: 2rem;
+    margin-top: 65px; /* Account for top nav height */
+    overflow-y: auto;
 }
 
 .content-header {
