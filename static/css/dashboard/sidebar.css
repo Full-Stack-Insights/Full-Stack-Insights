@@ -5,12 +5,14 @@
     box-shadow: 2px 0 10px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
     z-index: 900;
+     min-height: 100vh;
+    margin-top: 65px;
 }
 
 .sidebar-header {
-
-    padding: 2rem;
+    padding: 1rem 0;
     border-bottom: 1px solid #e2e8f0;
+    text-align: center;
 }
 
 .sidebar-header h3 {
@@ -55,7 +57,7 @@
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
         .top-nav {
         padding: 0 1rem;
     }

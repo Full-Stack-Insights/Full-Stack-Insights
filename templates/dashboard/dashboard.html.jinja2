@@ -7,8 +7,10 @@
 {% endblock header %}
 
 {% block main %}
+<main class="main-dashboard-content">
     <div class="dashboard-container">
-        {% include 'dashboard/sidebar.html.jinja2' %}
+    {% include 'dashboard/sidebar.html.jinja2' %}
+        
         {# {% if request.args.get('concept') != None  %}<!-- Conditional content includes based on request parameters -->
             {% include 'dashboard/concept.html.jinja2' %}
         {% else %}<!-- Conditional content includes based on request parameters -->
@@ -17,4 +19,5 @@
         {% endif %} #}
 
     </div>
+</main>
 {% endblock main %}
