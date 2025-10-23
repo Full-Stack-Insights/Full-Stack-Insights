@@ -23,8 +23,17 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    """Main page with navigation to all URL parameter demonstrations"""
+    """Main page with cards with links to different sections of the dashboard."""
     return render_template('index.html.jinja2')
+
+@app.route("/dashboard/<language>")
+def dashboard(language):
+    """Renders the dashboard for a specific programming language."""
+    return render_template('dashboard/dashboard.html.jinja2', language=language)
+
+
+
+
 
 # =============================================================================
 # MAIN APPLICATION RUNNER

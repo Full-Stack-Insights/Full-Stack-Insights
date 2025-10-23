@@ -1,6 +1,8 @@
-@import url('./home-banner.css');
-@import url('./home-cards.css');
+@import url('./homecss/home-banner.css');
+@import url('./homecss/home-cards.css');
 @import url('./footer.css');
+@import url('./dashboard/topnav.css');
+@import url('./dashboard/sidebar.css');
 
 * {
     box-sizing: border-box;
