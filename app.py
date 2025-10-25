@@ -75,6 +75,7 @@ def dashboard(language):
         language= "Python"
         resources = ["Python For Beginners", "https://www.python.org/about/gettingstarted"]
         concepts = [
+            "Lists",
             "Templating Engines",
             "Data Processing for Frontend", 
             "File Handling & Media",

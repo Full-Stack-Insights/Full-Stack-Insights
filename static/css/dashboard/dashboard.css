@@ -6,7 +6,7 @@
 }
 
 /* Main content area (next to sidebar) */
-.main-content-area {
+.main-dashboard-content-area {
     flex: 1;
     padding: 2rem;
     margin-top: 65px; /* Account for top nav height */

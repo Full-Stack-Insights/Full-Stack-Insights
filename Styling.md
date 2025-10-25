@@ -21,6 +21,8 @@ static/css/
 - **`dashboard.css:`** Dashboard specific styles
 - **`topnav.css:`** Dashboard top navigation specific styles
 - **`sidebar.css:`** Dashboard sidebar specific styles
+- **`css-concept.css:`** Styles for Css concepts
+- **`all-concepts.css:`** Common Styles for all concepts
 
 
 

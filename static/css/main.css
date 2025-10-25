@@ -4,6 +4,8 @@
 @import url('./dashboard/dashboard.css');
 @import url('./dashboard/topnav.css');
 @import url('./dashboard/sidebar.css');
+@import url('./dashboard/css-concepts/css-concept.css');
+@import url('./dashboard/all-concepts-intro.css');
 
 * {
     box-sizing: border-box;

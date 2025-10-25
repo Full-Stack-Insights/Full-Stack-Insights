@@ -1,9 +1,9 @@
-{% from "./dashboard/macros/_lang-home.html.jinja2" import render_lang_home %}
-<!-- Dasnboard Main Content Home -->
- <!-- render_lang_home(lang, intro_h3, intro_text, resource, lang_concepts_intro, lang_concepts) -->
+{% from "./dashboard/macros/_lang_home.html.jinja2" import render_lang_home %}
+{#  Dashboard Main Content Home #}
+ {# render_lang_home(lang, intro_h3, intro_text, resource, lang_concepts_intro, lang_concepts) #}
 
-<!-- HTMLMain Content Home -->
-{% if lang == "HTML" %}
+<!-- HTML Main Content Home -->
+{% if lang == "HTML" %} {# the lang variable is passed from the dashboard.html.jinja2 #}
         {{ render_lang_home(
     lang,
     "Welcome to the HTML Insights! Here you can learn more about the complex topics in HTML.",
