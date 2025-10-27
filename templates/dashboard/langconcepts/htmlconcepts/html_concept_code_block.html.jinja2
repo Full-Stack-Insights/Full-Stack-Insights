@@ -1,0 +1,19 @@
+<div class="code-block">
+    {% if sub_concept.title == '&lt;header&gt;' %}
+    <span class="code-property">&lt;header&gt;&lt;header/&gt;</span>
+    {% elif sub_concept.title == '&lt;nav&gt;' %}
+    <span class="code-property">&lt;nav&gt;&lt;nav/&gt;</span>
+    {% elif sub_concept.title == '&lt;article&gt;' %}
+    <span class="code-property">&lt;article&gt;&lt;article/&gt;</span>
+    {% elif sub_concept.title == '&lt;section&gt;' %}
+    <span class="code-property">&lt;section&gt;&lt;section/&gt;</span>
+    {% elif sub_concept.title == '&lt;aside&gt;' %}
+    <span class="code-property">&lt;aside&gt;&lt;aside/&gt;</span>
+    {% elif sub_concept.title == '&lt;footer&gt;' %}
+    <span class="code-property">&lt;footer&gt;&lt;footer/&gt;</span>
+    {% elif sub_concept.title == '&lt;main&gt;' %}  
+    <span class="code-property">&lt;main&gt;&lt;main/&gt;</span>
+    {% else %}
+    NO CODE EXAMPLE AVAILABLE
+    {% endif %}
+</div>

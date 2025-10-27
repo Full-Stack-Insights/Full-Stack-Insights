@@ -37,6 +37,8 @@
 
                         {% if lang == "CSS" %}
                             {% include "dashboard/langconcepts/cssconcepts/css_concept_code_block.html.jinja2" %}
+                        {% elif lang == "HTML" %}
+                            {% include "dashboard/langconcepts/htmlconcepts/html_concept_code_block.html.jinja2" %}
                         {% else %}
                         <div class="code-block">
                             NO CODE EXAMPLE AVAILABLE

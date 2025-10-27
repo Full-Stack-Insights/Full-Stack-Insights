@@ -51,6 +51,7 @@ def dashboard(language):
             "Accessibility",
             "Best Practices"
         ]
+        print(language)
         return render_template("dashboard/dashboard.html.jinja2", lang=language, concepts=concepts, resources=resources)
     
     elif language == "css":
