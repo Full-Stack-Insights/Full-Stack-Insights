@@ -1,10 +1,32 @@
+{# Context variables available: lang, concepts, resources, request etc.. #}
+{# Context variables are passed to this template using with context in the dashboard.html.jinja2 #}
 
-{# concept comes from dashboard.html.jinja2 #}
-{% if request.args.get('concept') == 'Semantic Elements' %}<!-- Conditional content includes based on request parameters -->
-    {% include "dashboard/langconcepts/htmlconcepts/semantic.html.jinja2" %}
-{% elif request.args.get('concept') == 'Flexbox' %}<!-- Conditional content includes based on request parameters -->
-    {% include "dashboard/langconcepts/cssconcepts/flexbox.html.jinja2" %}
-    {# {% include "./dashboard/migration/flexbox_dictionary.html.jinja2" %} #}
-{% else %}
-    <h2>No Content</h2>
-{% endif %}
+
+{# with context allows access to the context variables from the parent template in the included templates #}
+
+{% set current_concept = request.args.get('concept') %}
+
+<div class="concept-container">
+    {# Conditional includes based on the current concept requested #}
+    
+    {% if current_concept == 'Semantic Elements' %}
+    {# with passes all context variables to the included template #}
+        {% include "dashboard/langconcepts/htmlconcepts/semantic.html.jinja2" with context %}
+    {% elif current_concept == 'Flexbox' %}
+        {% include "dashboard/langconcepts/cssconcepts/flexbox.html.jinja2" with context %}
+    {% else %} {# Content not found: Shows available concepts when the requested concept isn't found #}
+        <div class="no-content">
+            <h2>Content Not Found</h2>
+            <p>The concept "{{ current_concept }}" is not available for {{ lang }}.</p>
+            
+            {% if concepts %}
+                <h3>Available concepts for {{ lang }}:</h3>
+                <ul>
+                {% for concept in concepts %}
+                    <li><a href="?concept={{ concept }}">{{ concept }}</a></li>
+                {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+    {% endif %}
+</div>

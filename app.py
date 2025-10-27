@@ -38,8 +38,8 @@ def home():
 @app.route("/dashboard/<language>")
 def dashboard(language):
     """Renders the dashboard for a specific programming language."""
-    print(f"Requested language dashboard: {language}")
-    print(request.args.get('concept'))
+    # print(f"Requested language dashboard: {language}")
+    # print(request.args.get('concept'))
     if language == "html":
         language= "HTML"
         resources = ["HTML Tutorial", "https://www.w3schools.com/html"]
@@ -65,6 +65,7 @@ def dashboard(language):
             "Advanced Selectors",
             "Performance"
         ]
+        print(language)
         return render_template("dashboard/dashboard.html.jinja2", lang=language, concepts=concepts, resources=resources)
         
     elif language == "javascript":

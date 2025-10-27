@@ -17,7 +17,7 @@ templates/
 
 ### Macros Templates
     macros/
-    ├── _css_concept.html.jinja2
+    ├── _concept.html.jinja2
     ├── _lang_home.html.jinja2
 
 

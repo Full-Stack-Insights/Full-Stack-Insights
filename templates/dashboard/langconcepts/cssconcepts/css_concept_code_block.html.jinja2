@@ -1,0 +1,33 @@
+<div class="code-block">
+    {% if sub_concept.title == 'Flexbox Basics' %}
+    <span class="code-property">.container</span> {
+    <span class="code-property">display</span>: <span class="code-value">flex</span>;}
+    {% elif sub_concept.title == 'Flex Direction' %}
+    <span class="code-property">flex-direction</span>: <span class="code-value">row</span>; /* default */
+    <span class="code-property">flex-direction</span>: <span class="code-value">column</span>;
+    <span class="code-property">flex-direction</span>: <span class="code-value">row-reverse</span>;
+    <span class="code-property">flex-direction</span>: <span class="code-value">column-reverse</span>;
+    {% elif sub_concept.title == 'Justify Content' %}
+    <span class="code-property">justify-content</span>: <span class="code-value">flex-start</span>; /* default */
+    <span class="code-property">justify-content</span>: <span class="code-value">center</span>;
+    <span class="code-property">justify-content</span>: <span class="code-value">space-between</span>;
+    {% elif sub_concept.title == 'Align Items' %}
+    <span class="code-property">align-items</span>: <span class="code-value">stretch</span>; /* default */
+    <span class="code-property">align-items</span>: <span class="code-value">center</span>;
+    <span class="code-property">align-items</span>: <span class="code-value">flex-end</span>;
+    {% elif sub_concept.title == 'Flex Wrap' %}
+    <span class="code-property">flex-wrap</span>: <span class="code-value">nowrap</span>; /* default */
+    <span class="code-property">flex-wrap</span>: <span class="code-value">wrap</span>;
+    <span class="code-property">flex-wrap</span>: <span class="code-value">wrap-reverse</span>;
+    {% elif sub_concept.title == 'Flex Item Properties' %}
+    <span class="code-property">flex-grow</span>: <span class="code-value">0</span>; /* default - don't grow */
+    <span class="code-property">flex-shrink</span>: <span class="code-value">1</span>; /* default - can shrink */
+    <span class="code-property">flex-basis</span>: <span class="code-value">auto</span>; /* default - based on content
+    */<br>
+    <span>/* Shorthand */</span><br>
+    <span class="code-property">flex</span>: <span class="code-value">1</span>; /* grow: 1, shrink: 1, basis: 0% */
+    <span class="code-property">flex</span>: <span class="code-value">0 1 auto</span>; /* explicit values */
+    {% elif sub_concept.title == 'Flex Basis' %}
+
+    {% endif %}
+</div>

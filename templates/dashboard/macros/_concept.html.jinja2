@@ -1,16 +1,20 @@
-{% macro render_css_concept(css_concept_header, css_concept_intro_h2, css_concept_intro_text, css_concept_details) %}
+{# lang=None is passed from the dashboard.html.jinja2 template to the render_concept macro #}
+{# lang is set to None because the macro may be called without a specific language context #}
+{# This allows the macro to conditionally include language-specific content #}
+
+{% macro render_concept(concept_header, concept_intro_h2, concept_intro_text, concept_details, lang=None) %}
 {# WHOLE CONTAINER #}
 <main class="concept-main">
 
     {# CONCEPT HEADING #}
     <div class="main-concept-heading-container">
-        <h1>{{ css_concept_header }}</h1>
+        <h1>{{ concept_header }}</h1>
     </div>
 
     {# CONCEPT INTRODUCTION #}
     <section class="main-concept-intro-container" >
-        <h2>{{ css_concept_intro_h2 }}</h2>
-        {% for line in css_concept_intro_text %}
+        <h2>{{ concept_intro_h2 }}</h2>
+        {% for line in concept_intro_text %}
             <p>{{ line }}</p>
             <br>
         {% endfor %}
@@ -18,7 +22,7 @@
 
     {# ALL SUB CONCEPTS SECTION  #}
     <div class="sub-concepts-content-container">
-        {% for sub_concept in css_concept_details %}
+        {% for sub_concept in concept_details %}
 
             {# SINGLE SUB CONCEPT SECTION  #}
             <section id="" class="concept-section">
@@ -31,38 +35,13 @@
                     <div class="concept-content">
                         <p>{{ sub_concept.description }}</p>
 
+                        {% if lang == "CSS" %}
+                            {% include "dashboard/langconcepts/cssconcepts/css_concept_code_block.html.jinja2" %}
+                        {% else %}
                         <div class="code-block">
-                            {% if sub_concept.title == 'Flexbox Basics' %}
-                                <span class="code-property">.container</span> {
-                                <span class="code-property">display</span>: <span class="code-value">flex</span>;}
-                            {% elif sub_concept.title == 'Flex Direction' %}
-                                <span class="code-property">flex-direction</span>: <span class="code-value">row</span>; /* default */
-                                <span class="code-property">flex-direction</span>: <span class="code-value">column</span>;
-                                <span class="code-property">flex-direction</span>: <span class="code-value">row-reverse</span>;
-                                <span class="code-property">flex-direction</span>: <span class="code-value">column-reverse</span>;
-                            {% elif sub_concept.title == 'Justify Content' %}
-                                <span class="code-property">justify-content</span>: <span class="code-value">flex-start</span>; /* default */
-                                <span class="code-property">justify-content</span>: <span class="code-value">center</span>;
-                                <span class="code-property">justify-content</span>: <span class="code-value">space-between</span>;
-                            {% elif sub_concept.title == 'Align Items' %}
-                                <span class="code-property">align-items</span>: <span class="code-value">stretch</span>; /* default */
-                                <span class="code-property">align-items</span>: <span class="code-value">center</span>;
-                                <span class="code-property">align-items</span>: <span class="code-value">flex-end</span>;
-                            {% elif sub_concept.title == 'Flex Wrap' %}
-                                <span class="code-property">flex-wrap</span>: <span class="code-value">nowrap</span>; /* default */
-                                <span class="code-property">flex-wrap</span>: <span class="code-value">wrap</span>;
-                                <span class="code-property">flex-wrap</span>: <span class="code-value">wrap-reverse</span>;
-                            {% elif sub_concept.title == 'Flex Item Properties' %}
-                                <span class="code-property">flex-grow</span>: <span class="code-value">0</span>; /* default - don't grow */
-                                <span class="code-property">flex-shrink</span>: <span class="code-value">1</span>; /* default - can shrink */
-                                <span class="code-property">flex-basis</span>: <span class="code-value">auto</span>; /* default - based on content */<br>
-                                <span>/* Shorthand */</span><br>
-                                <span class="code-property">flex</span>: <span class="code-value">1</span>; /* grow: 1, shrink: 1, basis: 0% */
-                                <span class="code-property">flex</span>: <span class="code-value">0 1 auto</span>; /* explicit values */
-                            {% elif sub_concept.title == 'Flex Basis' %}
-
-                            {% endif %}
+                            NO CODE EXAMPLE AVAILABLE
                         </div>
+                        {% endif %}
 
                         {% if sub_concept.demo.name is iterable and sub_concept.demo.name is not string %}
                             {% for demo_name, example in zip(sub_concept.demo.name, sub_concept.demo.examples) %}
