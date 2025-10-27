@@ -4,6 +4,7 @@
     {% include "dashboard/langconcepts/cssconcepts/sematic.html.jinja2" %}
 {% elif request.args.get('concept') == 'Flexbox' %}<!-- Conditional content includes based on request parameters -->
     {% include "dashboard/langconcepts/cssconcepts/flexbox.html.jinja2" %}
+    {# {% include "./dashboard/migration/flexbox_dictionary.html.jinja2" %} #}
 {% else %}
     <h2>No Content</h2>
 {% endif %}

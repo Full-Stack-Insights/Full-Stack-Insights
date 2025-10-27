@@ -1,5 +1,5 @@
-{% from "dashboard/macros/_css_concept.html.jinja2" import render_css_concept %}
-{# render_css_concept(css_concept_header, css_concept_intro_h2, css_concept_intro_text, css_concept_details) #}
+{% from "dashboard/migration/_concepts.html.jinja2" import render_css_concept %}
+{# Dictionary-based version of flexbox concepts #}
 
 {{ render_css_concept(
         'CSS Flexbox',
@@ -10,8 +10,7 @@
             'Flexbox is particularly useful for creating responsive layouts.'
         ],
         [
-        
-        {
+            {
                 'title': 'Flexbox Basics',
                 'purpose': 'Understanding the foundation of CSS Flexbox layout',
                 'description': 'Flexbox (Flexible Box Layout) is a CSS layout method that provides an efficient way to arrange, distribute, and align items in a container, even when their size is unknown or dynamic.',
@@ -39,7 +38,7 @@
                 ]
             },
 
-        {
+            {
                 'title': 'Flex Direction',
                 'purpose': 'Control the direction of flex items',
                 'description': 'The <code>flex-direction</code> property defines the main axis and the direction flex items are placed in the container.',
@@ -67,7 +66,7 @@
                 ]
             },
 
-                    {
+            {
                 'title': 'Justify Content',
                 'purpose': 'Align flex items along the main axis',
                 'description': 'The <code>justify-content</code> property defines how flex items are aligned along the main axis of the flex container.',
@@ -99,63 +98,7 @@
                 ]
             },
 
-        {
-            'title': 'Align Items',
-            'purpose': 'Align flex items along the cross axis',
-            'description': 'The <code>align-items</code> property defines how flex items are aligned along the cross axis of the flex container.',
-            'demo': {
-                'name': 'Align Items Demo',
-                'examples': ['Small', 'Large', 'Medium']
-            },
-            'properties': [
-                {
-                    'name': '<code>stretch</code> :',
-                    'description': 'Items stretch to fill the container (default). '
-                },
-                {
-                    'name': '<code>flex-start</code> :',
-                    'description': 'Items are aligned to the start of the cross axis. '
-                },
-                {
-                    'name': '<code>flex-end</code> :',
-                    'description': 'Items are aligned to the end of the cross axis.'
-                },
-                {
-                    'name': '<code>center</code> :',
-                    'description': 'Items are centered along the cross axis.'
-                },
-                {
-                    'name': '<code>baseline</code> :',
-                    'description': 'Items are aligned such that their baselines align.'
-                }
-            ]
-        },
-
-        {
-            'title': 'Flex Wrap',
-            'purpose': 'Control whether flex items are forced onto one line or can wrap onto multiple lines',
-            'description':'The <code>flex-wrap</code> property defines whether flex items should wrap onto multiple lines or stay on a single line.', 
-            'demo': {
-                'name': 'Flex Wrap Demo',
-                'examples': ['Item 1', 'Item 2', 'Item 3', 'Item 4', 'Item 5', 'Item 6']
-            },
-            'properties': [
-                {
-                    'name': '<code>nowrap</code> :',
-                    'description': 'Items are forced onto a single line. '
-                },
-                {
-                    'name': '<code>wrap</code> :',
-                    'description': 'Items can wrap onto multiple lines. '
-                },
-                {
-                    'name': '<code>wrap-reverse</code> :',
-                    'description': 'Items can wrap onto multiple lines, but in reverse order.'
-                }
-            ]
-        },
-
-                    {
+            {
                 'title': 'Flex Item Properties',
                 'purpose': 'Control individual flex item behavior',
                 'description': 'Flex item properties allow you to control the size and growth of individual flex items within a flex container.',
@@ -180,31 +123,27 @@
                         'description': 'Defines the default size of an element before the remaining space is distributed.'
                     }
                 ]
-            },
-
-        {
-            'title': 'Flex Basis',
-            'purpose': 'Control the initial size of flex items',
-            'description': 'The <code>flex-basis</code> property defines the default size of an element before the remaining space is distributed.',
-            'demo': {
-                'name': 'Flex Basis Demo',
-                'examples': ['Item A', 'Item B', 'Item C']
-            },
-            'properties': [
-                {
-                    'name': '<code>auto</code> :',
-                    'description': 'The default size is based on the content size. '
-                },
-                {
-                    'name': '<code>50%</code> :',
-                    'description': 'The item takes up 50% of the container width. '
-                },
-                {
-                    'name': '<code>100px</code> :',
-                    'description': 'The item has a fixed size of 100 pixels.'
-                }
-            ]
-        },
-
+            }
         ]
     ) }}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

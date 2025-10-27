@@ -15,7 +15,16 @@ of full stack development, including:
 from flask import Flask, request, render_template
 
 app = Flask(__name__)
+'''
+Make built-in functions available in Jinja2 templates:
+    Jinja2 templates use a Python-like syntax, they do not 
+    directly expose all Python built-in functions like isinstance() and zip(). 
+    By updating the Jinja2 environment's globals, we can make these functions
+    accessible within our templates.
+    
+'''
 
+app.jinja_env.globals.update(zip=zip, isinstance=isinstance)
 
 # =============================================================================
 # HOME PAGE - Navigation and Overview
