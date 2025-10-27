@@ -25,6 +25,8 @@ templates/
     langconcepts/
     ├── cssconcepts/
         ├── flexbox.html.jinja2
+    ├── htmlconcepts/
+        ├── semantic.html.jinja2
 
 - **Base Template[base.html.jinja2](./templates/base.html.jinja2):** Provides common HTML structure with header, main content blocks, and a comprehensive footer
 
@@ -47,7 +49,7 @@ templates/
 #### Dash Language Home Template flow
 - `dashboard.html.jinja2` gets ➡️ `lang_home.html.jinja2` renders its content using macro ➡️  `_lang_home.html.jinja2`
 #### Concept Template Flow
-- `dashboard.html.jinja2` gets ➡️ `concept.html.jinja2` gets ➡️ `flexbox.html.jinja2` renders its content using macro ➡️ `_css_concept.html.jinja2`
+- `dashboard.html.jinja2` gets ➡️ `concept.html.jinja2` gets ➡️ `flexbox.html.jinja2` or `semantiic.html.jinja2` renders its content using macro ➡️ `_concept.html.jinja2`
 
 
 
