@@ -57,7 +57,7 @@
                             {% for demo_name, demo_id, example in zip(sub_concept.demo.name, sub_concept.demo.id, sub_concept.demo.examples) %}
                                 <div class="demo-container">
                                         <div class="demo-label">{{ demo_name }}</div>
-                                        <div class="flex-container wrap-nowrap">
+                                        <div id="{{ demo_id }}" class="flex-container">
                                         {% for example in example %}
                                             <div class="flex-item">{{ example }}</div>
                                         {% endfor %}
@@ -67,7 +67,7 @@
                         {% else %}
                             <div class="demo-container">
                                     <div class="demo-label">{{ sub_concept.demo.name }}</div>
-                                    <div class="flex-container wrap-nowrap">
+                                    <div id="{{sub_concept.demo.id}}" class="flex-container">
                                     {% for example in sub_concept.demo.examples %}
                                         <div class="flex-item">{{ example }}</div>
                                     {% endfor %}
