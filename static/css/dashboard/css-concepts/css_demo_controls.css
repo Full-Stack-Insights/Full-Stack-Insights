@@ -44,3 +44,103 @@
 .control-btn.active {
   background: #007bff;
 }
+
+
+/* =====================================================
+           SPECIFIC FLEXBOX DEMONSTRATIONS
+    ===================================================== */
+
+/* Flex Direction Examples */
+.direction-row {
+  flex-direction: row;
+}
+
+.direction-column {
+  flex-direction: column;
+  min-height: 200px;
+}
+
+.direction-row-reverse {
+  flex-direction: row-reverse;
+}
+
+.direction-column-reverse {
+  flex-direction: column-reverse;
+  min-height: 200px;
+}
+
+/* Justify Content Examples */
+.justify-start {
+  justify-content: flex-start;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+.justify-evenly {
+  justify-content: space-evenly;
+}
+
+/* Align Items Examples */
+.align-start {
+  align-items: flex-start;
+}
+
+.align-end {
+  align-items: flex-end;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.align-stretch {
+  align-items: stretch;
+}
+
+.align-baseline {
+  align-items: baseline;
+}
+
+/* Flex Wrap Examples */
+.wrap-nowrap {
+  flex-wrap: nowrap;
+}
+
+.wrap-wrap {
+  flex-wrap: wrap;
+}
+
+.wrap-reverse {
+  flex-wrap: wrap-reverse;
+}
+
+/* Flex Item Properties */
+.item-grow-1 {
+  flex-grow: 1;
+}
+
+.item-grow-2 {
+  flex-grow: 2;
+}
+
+.item-shrink-0 {
+  flex-shrink: 0;
+}
+
+.item-basis-200 {
+  flex-basis: 200px;
+}

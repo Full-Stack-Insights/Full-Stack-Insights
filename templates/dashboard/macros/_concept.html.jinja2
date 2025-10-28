@@ -67,9 +67,14 @@
                         {% else %}
                             <div class="demo-container">
                                     <div class="demo-label">{{ sub_concept.demo.name }}</div>
-                                    <div id="{{sub_concept.demo.id}}" class="flex-container">
+                                    <div id="{{sub_concept.demo.id}}" class="flex-container {{sub_concept.demo.class}}">
                                     {% for example in sub_concept.demo.examples %}
-                                        <div class="flex-item">{{ example }}</div>
+                                        {% if example == "Large" %}
+                                        {# Apply specific styles for Align Items Demo Large #}
+                                            <div class="flex-item" style="padding: 2rem 1rem;">{{ example }}</div>
+                                        {% else %}
+                                            <div class="flex-item">{{ example }}</div>
+                                        {% endif %}
                                     {% endfor %}
                                     </div>
                             </div>
