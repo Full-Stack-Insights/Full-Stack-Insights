@@ -155,6 +155,26 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
+@media (max-width: 768px) {
+  .flex-container {
+    min-height: 100px;
+    padding: 0.5rem;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .flex-item {
+    min-width: 40px;
+    padding: 0.5rem;
+    font-size: 0.8rem;
+  }
+
+  .demo-container {
+    padding: 1rem;
+  }
+}
+
 
 .more-info {
   display: flex;

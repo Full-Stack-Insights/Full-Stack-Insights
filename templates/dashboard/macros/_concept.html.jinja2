@@ -35,6 +35,7 @@
                     <div class="concept-content">
                         <p>{{ sub_concept.description }}</p>
 
+                        {# CODE BLOCK #}
                         {% if lang == "CSS" %}
                             {% include "dashboard/langconcepts/cssconcepts/css_concept_code_block.html.jinja2" %}
                         {% elif lang == "HTML" %}
@@ -45,8 +46,15 @@
                         </div>
                         {% endif %}
 
+                        {# CONTROLS SECTION  #}
+                            {% if lang == "CSS" %}
+                            {% include "dashboard/langconcepts/cssconcepts/css_demo_controls.html.jinja2" %}
+                            {% else %}
+                                {{pass}}
+                            {% endif %}
+                        {# DEMO SECTION  #}
                         {% if sub_concept.demo.name is iterable and sub_concept.demo.name is not string %}
-                            {% for demo_name, example in zip(sub_concept.demo.name, sub_concept.demo.examples) %}
+                            {% for demo_name, demo_id, example in zip(sub_concept.demo.name, sub_concept.demo.id, sub_concept.demo.examples) %}
                                 <div class="demo-container">
                                         <div class="demo-label">{{ demo_name }}</div>
                                         <div class="flex-container wrap-nowrap">

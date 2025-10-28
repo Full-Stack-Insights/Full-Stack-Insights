@@ -46,12 +46,16 @@ templates/
         - Conditionally renders the appropiate concept
 
 
-#### Dash Language Home Template flow
-- `dashboard.html.jinja2` gets ➡️ `lang_home.html.jinja2` renders its content using macro ➡️  `_lang_home.html.jinja2`
-#### Concept Template Flow
-- `dashboard.html.jinja2` gets ➡️ `concept.html.jinja2` gets ➡️ `flexbox.html.jinja2` or `semantiic.html.jinja2` renders its content using macro ➡️ `_concept.html.jinja2`
-
-
+#### Dashboard Template flow
+- `dashboard.html.jinja2` conditionally renders 
+    - `lang_home.html.jinja2` if `concept` variable is `None`
+    - `concept.html.jinja2'` if `concept` variable is not `None`
+- `lang_home.html.jinja2` conditionally renders a language home page 
+    - base on the value of the `lang` variable
+    - uses `_lang_home.html.jinja2` macro
+- `concept.html.jinja2'` conditionally renders a concept page
+    - based on the `concept` variable value
+    - each concept template(like `flexbox.html.jinja2`) uses `_concept.html.jinja2` macro to render its contents
 
 
 

@@ -1,0 +1,54 @@
+{# CONTROLS SECTION for macro _concept.html.jinja2 #}
+{% if sub_concept.title == 'Flex Direction' %}
+<div class="controls">
+    <div class="control-group">
+        <label class="control-label">Choose Direction:</label>
+        <div class="control-buttons">
+            <button class="control-btn active" onclick="setDirection('row')">row</button>
+            <button class="control-btn" onclick="setDirection('column')">column</button>
+            <button class="control-btn" onclick="setDirection('row-reverse')">row-reverse</button>
+            <button class="control-btn" onclick="setDirection('column-reverse')">column-reverse</button>
+        </div>
+    </div>
+</div>
+{% elif sub_concept.title == 'Justify Content' %}
+<div class="controls">
+    <div class="control-group">
+        <label class="control-label">Choose Justification:</label>
+        <div class="control-buttons">
+            <button class="control-btn active" onclick="setJustify('flex-start')">flex-start</button>
+            <button class="control-btn" onclick="setJustify('center')">center</button>
+            <button class="control-btn" onclick="setJustify('flex-end')">flex-end</button>
+            <button class="control-btn" onclick="setJustify('space-between')">space-between</button>
+            <button class="control-btn" onclick="setJustify('space-around')">space-around</button>
+            <button class="control-btn" onclick="setJustify('space-evenly')">space-evenly</button>
+        </div>
+    </div>
+</div>
+{% elif sub_concept.title == 'Align Items' %}
+<div class="controls">
+    <div class="control-group">
+        <label class="control-label">Choose Alignment:</label>
+        <div class="control-buttons">
+            <button class="control-btn" onclick="setAlign('flex-start')">flex-start</button>
+            <button class="control-btn active" onclick="setAlign('center')">center</button>
+            <button class="control-btn" onclick="setAlign('flex-end')">flex-end</button>
+            <button class="control-btn" onclick="setAlign('stretch')">stretch</button>
+            <button class="control-btn" onclick="setAlign('baseline')">baseline</button>
+        </div>
+    </div>
+</div>
+{% elif sub_concept.title == 'Flex Wrap' %}
+<div class="controls">
+    <div class="control-group">
+        <label class="control-label">Choose Wrap:</label>
+        <div class="control-buttons">
+            <button class="control-btn active" onclick="setWrap('nowrap')">nowrap</button>
+            <button class="control-btn" onclick="setWrap('wrap')">wrap</button>
+            <button class="control-btn" onclick="setWrap('wrap-reverse')">wrap-reverse</button>
+        </div>
+    </div>
+</div>
+{% else %}
+{{ pass }}
+{% endif %}

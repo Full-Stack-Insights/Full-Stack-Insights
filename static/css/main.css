@@ -6,6 +6,8 @@
 @import url('./dashboard/sidebar.css');
 @import url('./dashboard/css-concepts/css-concept.css');
 @import url('./dashboard/all-concepts-intro.css');
+@import url('./dashboard/example_code.css');
+@import url('./dashboard/css-concepts/css_demo_controls.css');
 
 * {
     box-sizing: border-box;

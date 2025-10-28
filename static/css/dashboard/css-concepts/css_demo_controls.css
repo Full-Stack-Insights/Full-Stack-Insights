@@ -1,0 +1,46 @@
+/* =====================================================
+           CONTROL PANELS
+   ====================================================== */
+.controls {
+  background: #e9ecef;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1rem 0;
+}
+
+.control-group {
+  margin-bottom: 1rem;
+}
+
+.control-label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #495057;
+}
+
+.control-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.control-btn {
+  background: #6c757d;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.control-btn:hover {
+  background: #495057;
+  transform: translateY(-1px);
+}
+
+.control-btn.active {
+  background: #007bff;
+}
