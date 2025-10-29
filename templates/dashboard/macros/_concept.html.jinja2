@@ -53,31 +53,48 @@
                                 {{pass}}
                             {% endif %}
                         {# DEMO SECTION  #}
-                        {% if sub_concept.demo.name is iterable and sub_concept.demo.name is not string %}
-                            {% for demo_name, demo_id, example in zip(sub_concept.demo.name, sub_concept.demo.id, sub_concept.demo.examples) %}
+                        {% if sub_concept.demo is defined %}{# check if demo is defined #}
+                            {% if sub_concept.demo.name is iterable and sub_concept.demo.name is not string %}
+                                {% for demo_name, demo_id, example in zip(sub_concept.demo.name, sub_concept.demo.id, sub_concept.demo.examples) %}
+                                    <div class="demo-container">
+                                            <div class="demo-label">{{ demo_name }}</div>
+                                            <div id="{{ demo_id }}" class="flex-container">
+                                            {% for example in example %}
+                                                <div class="flex-item">{{ example }}</div>
+                                            {% endfor %}
+                                            </div>
+                                    </div>
+                                {% endfor %}
+                            {% else %}
                                 <div class="demo-container">
-                                        <div class="demo-label">{{ demo_name }}</div>
-                                        <div id="{{ demo_id }}" class="flex-container">
-                                        {% for example in example %}
-                                            <div class="flex-item">{{ example }}</div>
+                                        <div class="demo-label">{{ sub_concept.demo.name }}</div>
+                                        <div id="{{sub_concept.demo.id}}" class="flex-container {{sub_concept.demo.class}}">
+                                        {% for example in sub_concept.demo.examples %}
+                                            {% if example == "Large" %}
+                                            {# Apply specific styles for Align Items Demo Large #}
+                                                <div class="flex-item" style="padding: 2rem 1rem;">{{ example }}</div>
+                                            {% else %}
+                                                <div class="flex-item">{{ example }}</div>
+                                            {% endif %}
                                         {% endfor %}
                                         </div>
                                 </div>
+                            {% endif %}
+                        {% else %} {# If demo is not defined #}
+                            {{ pass }}
+                        {% endif %}
+
+                        {# ADDITIONAL INFO SECTION #}
+                        {# is defined comes from Jinja2 #}
+                        {% if sub_concept.additional_info is defined %}
+                        <div class="more-info best-practices">
+                        <h2>What it does</h2>
+                        <ul>
+                            {% for info in sub_concept.additional_info %}
+                                <li>{{ info }}</li>
                             {% endfor %}
-                        {% else %}
-                            <div class="demo-container">
-                                    <div class="demo-label">{{ sub_concept.demo.name }}</div>
-                                    <div id="{{sub_concept.demo.id}}" class="flex-container {{sub_concept.demo.class}}">
-                                    {% for example in sub_concept.demo.examples %}
-                                        {% if example == "Large" %}
-                                        {# Apply specific styles for Align Items Demo Large #}
-                                            <div class="flex-item" style="padding: 2rem 1rem;">{{ example }}</div>
-                                        {% else %}
-                                            <div class="flex-item">{{ example }}</div>
-                                        {% endif %}
-                                    {% endfor %}
-                                    </div>
-                            </div>
+                        </ul>
+                        </div>
                         {% endif %}
 
                     </div>

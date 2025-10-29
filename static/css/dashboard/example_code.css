@@ -1,6 +1,12 @@
 /* =====================================================
            CODE DISPLAY
   ===================================================== */
+ .code-example-info
+  {
+    margin-top: 1rem;
+    margin-left: 2rem;
+    margin-bottom: 0.5rem; 
+  }
 .code-block {
   background: #2d3748;
   color: #e2e8f0;
@@ -13,10 +19,40 @@
   line-height: 1.5;
 }
 
+.code-language {
+  width: 30%;
+  color: #e5f104;
+  font-weight: bold;
+}
+
+.code-comment{
+  color: red;
+  font-style: italic;
+  font-size: .8rem;
+}
+
+.code-line{
+  border: none; /* Remove default border */
+  height: 2px; /* Set the thickness of the line */
+  background-color: #e5f104; /* Set the color */
+}
+
 .code-property {
-  color: #81e6d9;
+  color: #f0c434;
+}
+
+.code-html{
+  color: #6b9ad8;
+}
+
+.code-text{
+  color: #e2e8f0;
 }
 
 .code-value {
   color: #f6ad55;
+}
+
+.code-current-example{
+  color: #3deb09;
 }
