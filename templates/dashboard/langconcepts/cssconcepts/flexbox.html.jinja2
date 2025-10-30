@@ -31,34 +31,19 @@
         {
             'title': 'Flex Direction',
             'purpose': 'Control the direction of flex items',
-            'description': 'The <code>flex-direction</code> property defines the main axis and the direction flex items are placed in the container.',
+            'description': 'The <code>flex-direction</code> property defines the main axis and determines the direction in which flex items are arranged.',
             'demo': {
                         'name': 'Flex Direction Demo',
                         'id': 'directionDemo',
                         'class': 'direction-row',
                         'examples': ['First', 'Second', 'Third', 'Fourth']
                     },
-            'properties': [
-                                {
-                                    'name': '<code>row</code>',
-                                    'description': 'The default value. Items are arranged horizontally, left to right.'
-                                },
-                                {
-                                    'name': '<code>row-reverse</code>',
-                                    'description': 'Items are arranged horizontally, but from right to left.'
-                                },
-                                {
-                                    'name': '<code>column</code>',
-                                    'description': 'Items are arranged vertically, from top to bottom.'
-                                },
-                                {
-                                    'name': '<code>column-reverse</code>',
-                                    'description': 'Items are arranged vertically, but from bottom to top'
-                                }
-                            ],
             'additional_info': [
-                                'The <code>flex-direction</code> property is a sub-property of the <code>flex</code> shorthand property.',
-                                'It is particularly useful for creating responsive layouts.'
+                                'The <code>flex-direction</code> property has four possible values.',
+                                '<code>row</code>: default, items flow horizontally from left to right.',
+                                '<code>row-reverse</code>: items flow horizontally from right to left, and the order of the items is reversed.',
+                                '<code>column</code>: items flow vertically from top to bottom.',
+                                '<code>column-reverse</code>: items flow vertically from bottom to top, and the order of the items is reversed.'
                             ]
         },
 
@@ -67,15 +52,19 @@
             'purpose': 'Determines how flex items are positioned and aligned within a flex container. <br>The Axes Change Based on <code>flex-direction</code> property.',
             'description': '',
             'additional_info': [
-                                'The <code>flex-direction</code> property, is automatically set to <code>row</code> when <code>display:flex</code> is applied.',
-                                '<code>flex-direction:row;</code> sets the main axis to horizontal (left to right) and the cross axis to vertical (top to bottom).',
-                                '<code>flex-direction:column;</code> sets the main axis to vertical (top to bottom) and the cross axis to horizontal (left to right).'
+                                'Main axis: The primary direction set by flex-direction, the direction items flow',
+                                'Cross axis: The perpendicular direction to the main axis, perpendicular to the flow of items',
+                                'The main axis and cross axis affect how other properties are applied to flex items.',
+                                'Properties that control the main axis: <code>justify-content, flex-grow, flex-shrink, flex-basis</code>',
+                                'Properties that control the cross axis: <code>align-items, align-self, align-content</code>',
+                                'Justify = Main axis',
+                                'Align = Cross axis'
                                ]
         },
 
         {
             'title': 'Justify Content',
-            'purpose': 'Align flex items along the main axis',
+            'purpose': 'Always align flex items along the main axis, which changes direction based on flex-direction',
             'description': 'The <code>justify-content</code> property defines how flex items are aligned along the main axis of the flex container.',
             'demo': {
                         'name': 'Justify Content Demo',

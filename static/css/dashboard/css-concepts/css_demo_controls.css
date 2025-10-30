@@ -82,15 +82,15 @@
   justify-content: center;
 }
 
-.justify-between {
+.justify-space-between {
   justify-content: space-between;
 }
 
-.justify-around {
+.justify-space-around {
   justify-content: space-around;
 }
 
-.justify-evenly {
+.justify-space-evenly {
   justify-content: space-evenly;
 }
 
