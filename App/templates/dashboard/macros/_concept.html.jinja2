@@ -1,0 +1,115 @@
+{# lang=None is passed from the dashboard.html.jinja2 template to the render_concept macro #}
+{# lang is set to None because the macro may be called without a specific language context #}
+{# This allows the macro to conditionally include language-specific content #}
+
+{% macro render_concept(concept_header, concept_intro_h2, concept_intro_text, concept_details, lang=None) %}
+{# WHOLE CONTAINER #}
+<main class="concept-main">
+
+    {# CONCEPT HEADING #}
+    <div class="main-concept-heading-container">
+        <h1>{{ concept_header }}</h1>
+    </div>
+
+    {# CONCEPT INTRODUCTION #}
+    <section class="main-concept-intro-container" >
+        <h2>{{ concept_intro_h2 }}</h2>
+        {% for line in concept_intro_text %}
+            <p>{{ line }}</p>
+            <br>
+        {% endfor %}
+    </section>
+
+    {# ALL SUB CONCEPTS SECTION  #}
+    <div class="sub-concepts-content-container">
+        {% for sub_concept in concept_details %}
+
+            {# SINGLE SUB CONCEPT SECTION  #}
+            <section id="" class="concept-section">
+
+                    <div class="concept-header">
+                        <h2 class="concept-title">{{ sub_concept.title }}</h2>
+                        <p class="concept-description">{{ sub_concept.purpose }}</p>
+                    </div>
+
+                    <div class="concept-content">
+                        <p>{{ sub_concept.description }}</p>
+
+                        {# CODE BLOCK #}
+                        {% if lang == "CSS" %}
+                            {% include "dashboard/langconcepts/cssconcepts/css_concept_code_block.html.jinja2" %}
+                        {% elif lang == "HTML" %}
+                            {% include "dashboard/langconcepts/htmlconcepts/html_concept_code_block.html.jinja2" %}
+                        {% else %}
+                        <div class="code-block">
+                            NO CODE EXAMPLE AVAILABLE
+                        </div>
+                        {% endif %}
+
+                        {# CONTROLS SECTION  #}
+                            {% if lang == "CSS" %}
+                            {% include "dashboard/langconcepts/cssconcepts/css_demo_controls.html.jinja2" %}
+                            {% else %}
+                                {{pass}}
+                            {% endif %}
+                        {# DEMO SECTION  #}
+                        {% if sub_concept.demo is defined %}{# check if demo is defined #}
+                            {% if sub_concept.demo.name is iterable and sub_concept.demo.name is not string %}
+                                {% for demo_name, demo_id, example in zip(sub_concept.demo.name, sub_concept.demo.id, sub_concept.demo.examples) %}
+                                    <div class="demo-container">
+                                            <div class="demo-label">{{ demo_name }}</div>
+                                            <div id="{{ demo_id }}" class="flex-container">
+                                            {% for example in example %}
+                                                <div class="flex-item">{{ example }}</div>
+                                            {% endfor %}
+                                            </div>
+                                    </div>
+                                {% endfor %}
+                            {% else %}
+                                <div class="demo-container">
+                                        <div class="demo-label">{{ sub_concept.demo.name }}</div>
+                                        <div id="{{sub_concept.demo.id}}" class="flex-container {{sub_concept.demo.class}}">
+                                        {% for example in sub_concept.demo.examples %}
+                                            {% if example == "Large" %}
+                                            {# Apply specific styles for Align Items Demo Large #}
+                                                <div class="flex-item" style="padding: 2rem 1rem;">{{ example }}</div>
+                                            {% else %}
+                                                <div class="flex-item">{{ example }}</div>
+                                            {% endif %}
+                                        {% endfor %}
+                                        </div>
+                                </div>
+                            {% endif %}
+                        {% else %} {# If demo is not defined #}
+                            {{ pass }}
+                        {% endif %}
+
+                        {# ADDITIONAL INFO SECTION #}
+                        {# is defined comes from Jinja2 #}
+                        {% if sub_concept.additional_info is defined %}
+                        <div class="more-info best-practices">
+                        <h2>What it does</h2>
+                        <ul>
+                            {% for info in sub_concept.additional_info %}
+                                <li>{{ info }}</li>
+                            {% endfor %}
+                        </ul>
+                        </div>
+                        {% endif %}
+
+                    </div>
+
+
+            </section>
+            
+                
+
+        {% endfor %}
+    </div>
+
+
+</main>
+
+{% endmacro %}
+
+

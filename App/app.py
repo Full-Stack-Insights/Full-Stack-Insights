@@ -36,6 +36,14 @@ def home():
     return render_template('index.html.jinja2')
 
 
+# =============================================================================
+# DashBoard - Navigation and Overview
+# =============================================================================
+@app.route("/dashboard/<language>")
+def dashboard(language):
+    """Dashboard main page with links to different language concepts."""
+    return render_template("dashboard/dashboard.html.jinja2", lang=language)
+
 
 
 

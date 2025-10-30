@@ -1,0 +1,32 @@
+/* Main Content */
+.dashboard-container{
+    display: flex;
+    min-height: 100vh;
+    background: #f1f5f9;
+}
+
+/* Main content area (next to sidebar) */
+.main-dashboard-content-area {
+    flex: 1;
+    padding: 2rem;
+    margin-top: 65px; /* Account for top nav height */
+    overflow-y: auto;
+}
+
+
+
+
+
+
+/* Ensure Bootstrap gaps work */
+/* .row.g-4 {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 1.5rem;
+}
+
+.row.g-4 > * {
+    padding-right: calc(var(--bs-gutter-x) * 0.5);
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
+    margin-top: var(--bs-gutter-y);
+} */
+

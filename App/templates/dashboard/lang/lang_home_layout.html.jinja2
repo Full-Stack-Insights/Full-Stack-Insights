@@ -1,0 +1,31 @@
+<main class="main-content">
+    <div class="lang-home-content-header">
+        <h1 id="lang-home-page-title">{{ lang }}</h1>
+    </div>
+
+        <div class="lang-home-content-body" id="lang-home-content-body">
+            <div class="lang-home-content-intro">
+                <h3>{{ intro_h3 }}</h3>
+                {% for line in intro_text %}
+                     {% if loop.first %}
+                        {# This code will only execute for the first item in my_list #}
+                    <p>{{ line }} <a class="lang-home-resource-link" href="{{ resource }}" target="_blank">{{ resource }}</a></p>
+                    {% else %}
+                    <p>{{ line }}</p>
+                    {% endif %}
+                {% endfor %}
+            </div>
+
+            <div class="lang-home-concepts-intro">
+                <h3>{{ lang_concepts_intro }}</h3>
+                    <div class="lang-home-concept-grid">
+                        {% for concept in lang_concepts %}
+                        <div class="lang-home-concept-description">
+                            <h4>{{ concept["concept_name"] }}</h4>
+                            <p>{{ concept["concept_description"] }}</p>
+                        </div>
+                        {% endfor %}
+                </div>
+            </div>
+        </div>
+</main>

@@ -1,5 +1,14 @@
-@import url('./homecss/home-banner.css');
-@import url('./homecss/home-cards.css');
+/* Landing Page */
+@import url('./home/home-banner.css');
+@import url('./home/home-cards.css');
+
+/* Dashboard */
+@import url('./dashboard/dashboard.css');
+@import url('./dashboard/topnav.css');
+@import url('./dashboard/sidebar.css');
+@import url('./dashboard/macros/lang_home.css');
+
+/* Footer */
 @import url('./footer.css');
 
 * {

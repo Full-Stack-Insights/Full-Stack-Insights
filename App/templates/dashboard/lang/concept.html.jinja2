@@ -1,0 +1,34 @@
+{# Context variables available: lang, concepts, resources, request etc.. #}
+{# Context variables are passed to this template using with context in the dashboard.html.jinja2 #}
+
+
+{# with context allows access to the context variables from the parent template in the included templates #}
+
+{% set current_concept = request.args.get('concept') %}
+
+<div class="concept-container">
+    {# Conditional includes based on the current concept requested #}
+    
+    {% if current_concept == 'Semantic Elements' %}
+    {# with passes all context variables to the included template #}
+        {# {% include "dashboard/langconcepts/htmlconcepts/semantic.html.jinja2" with context %} #}
+        <h2>Semantic Elements Loaded....</h2>
+    {% elif current_concept == 'Flexbox' %}
+        {# {% include "dashboard/langconcepts/cssconcepts/flexbox.html.jinja2" with context %} #}
+        <h2>Flexbox Loaded....</h2>
+    {% else %} {# Content not found: Shows available concepts when the requested concept isn't found #}
+        <div class="no-content">
+            <h2>Content Not Found</h2>
+            <p>The concept "{{ current_concept }}" is not available for {{ lang }}.</p>
+            
+            {% if concepts %}
+                <h3>Available concepts for {{ lang }}:</h3>
+                <ul>
+                {% for concept in concepts %}
+                    <li><a href="?concept={{ concept }}">{{ concept }}</a></li>
+                {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+    {% endif %}
+</div>

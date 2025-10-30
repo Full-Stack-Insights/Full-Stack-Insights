@@ -8,20 +8,7 @@
 
 {% block main %}
     <div class="dashboard-container">
-    {% include 'dashboard/sidebar.html.jinja2' %}
-    
-    <div class="main-dashboard-content-area">
-         {% if request.args.get('concept') != None  %}<!-- Conditional content includes based on request parameters -->
-         {# app.py passes variables to the dashboard.html.jinja2 template #}
-         {# with context passes all variables from app.py to concept.html.jinja2 #}
-         {#  with context is used to get the variables lang, concepts, resources, request etc.. from app.py and pass them to concept.html.jinja2 #}
-
-            {% include 'dashboard/concept.html.jinja2' with context %}
-        {% else %}<!-- Conditional content includes based on request parameters -->
-            {% include 'dashboard/lang_home.html.jinja2' %}
-
-        {% endif %}
-    </div>
+                {% include 'dashboard/lang/lang_home_content.html.jinja2' %}
     </div>
 {% endblock main %}
 

@@ -1,0 +1,40 @@
+{% macro render_dashboard_content(lang, intro_h3, intro_text, resource, lang_concepts_intro, lang_concepts) %}
+
+
+{# Sidebar Navigation: dynamically displays the appropriate concepts for each language #}
+
+<aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+        <h3 id="sidebar-title">{{ lang }}</h3>
+    </div>
+    <nav class="sidebar-nav" id="sidebar-nav">
+        <ul>
+            {% for concept in lang_concepts %}
+            <li>
+                <a href="{{ url_for('dashboard', language=lang | lower, concept=concept['concept_name']) }}"
+                    class="sidebar-link {% if request.view_args and request.view_args.get('concept') == concept %}active{% endif %}">
+                    {{ concept['concept_name'] }}
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </nav>
+</aside>
+
+{# Main Content Area #}
+
+
+<div class="main-dashboard-content-area">
+
+
+{% if request.args.get('concept') != None  %}
+    {# If a specific concept is requested, include the concept template #}
+    {# {% include 'dashboard/concept.html.jinja2' with context %} #}
+    {# <h1>Concept Content Loaded...</h1> #}
+    {% include 'dashboard/lang/concept.html.jinja2' with context %}
+{% else %}
+    {# If no specific concept is requested, include the language home content template #}
+    {% include 'dashboard/lang/lang_home_layout.html.jinja2' with context %}
+{% endif %}
+</div>
+{% endmacro %}
