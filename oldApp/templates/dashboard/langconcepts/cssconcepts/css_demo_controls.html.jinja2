@@ -1,0 +1,61 @@
+{# CONTROLS SECTION for macro _concept.html.jinja2 #}
+{% if sub_concept.title == 'Flex Direction' %}
+<div class="controls">
+    <div class="control-group">
+        <label class="control-label">Choose Direction:</label>
+        <div class="control-buttons">
+            <button class="control-btn active" onclick="setDirection('row', event)">row</button>
+            <button class="control-btn" onclick="setDirection('column', event)">column</button>
+            <button class="control-btn" onclick="setDirection('row-reverse', event)">row-reverse</button>
+            <button class="control-btn" onclick="setDirection('column-reverse', event)">column-reverse</button>
+        </div>
+    </div>
+</div>
+{% elif sub_concept.title == 'Justify Content' %}
+<div class="controls">
+    <div class="control-group">
+        {# <label class="control-label">Choose Direction:</label>
+        <div class="control-buttons">
+            <button class="control-btn active" onclick="setJustify('row', event)">row</button>
+            <button class="control-btn" onclick="setJustify('column', event)">column</button>
+            <button class="control-btn" onclick="setJustify('row-reverse', event)">row-reverse</button>
+            <button class="control-btn" onclick="setJustify('column-reverse', event)">column-reverse</button>
+        </div> #}
+        <label class="control-label">Choose Justification:</label>
+        <div class="control-buttons">
+            <button class="control-btn active" onclick="setJustify('flex-start', event)">flex-start</button>
+            <button class="control-btn" onclick="setJustify('center', event)">center</button>
+            <button class="control-btn" onclick="setJustify('flex-end', event)">flex-end</button>
+            <button class="control-btn" onclick="setJustify('space-between', event)">space-between</button>
+            <button class="control-btn" onclick="setJustify('space-around', event)">space-around</button>
+            <button class="control-btn" onclick="setJustify('space-evenly', event)">space-evenly</button>
+        </div>
+    </div>
+</div>
+{% elif sub_concept.title == 'Align Items' %}
+<div class="controls">
+    <div class="control-group">
+        <label class="control-label">Choose Alignment:</label>
+        <div class="control-buttons">
+            <button class="control-btn" onclick="setAlign('flex-start', event)">flex-start</button>
+            <button class="control-btn active" onclick="setAlign('center', event)">center</button>
+            <button class="control-btn" onclick="setAlign('flex-end', event)">flex-end</button>
+            <button class="control-btn" onclick="setAlign('stretch', event)">stretch</button>
+            <button class="control-btn" onclick="setAlign('baseline', event)">baseline</button>
+        </div>
+    </div>
+</div>
+{% elif sub_concept.title == 'Flex Wrap' %}
+<div class="controls">
+    <div class="control-group">
+        <label class="control-label">Choose Wrap:</label>
+        <div class="control-buttons">
+            <button class="control-btn active" onclick="setWrap('nowrap', event)">nowrap</button>
+            <button class="control-btn" onclick="setWrap('wrap', event)">wrap</button>
+            <button class="control-btn" onclick="setWrap('wrap-reverse', event)">wrap-reverse</button>
+        </div>
+    </div>
+</div>
+{% else %}
+{{ pass }}
+{% endif %}

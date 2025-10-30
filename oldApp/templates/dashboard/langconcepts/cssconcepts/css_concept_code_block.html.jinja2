@@ -1,0 +1,200 @@
+{# CODE BLOCK for macro _concept.html.jinja2 #}
+
+{# FLEXBOX BASICS #}
+{% if sub_concept.title == 'Flexbox Basics' %}
+<div class="code-block">
+    <span class="code-language">HTML</span><br>
+    <hr class="code-line">
+    <span class="code-html">&lt;div <span class="code-current-example">class="container"</span>&gt;</span><br>
+    &nbsp;<span class="code-html">&lt;div&gt;<span class="code-text">Item 1</span>&lt;div/&gt;</span><br>
+    &nbsp;<span class="code-html">&lt;div&gt;<span class="code-text">Item 2</span>&lt;div/&gt;</span><br>
+    &nbsp;<span class="code-html">&lt;div&gt;<span class="code-text">Item 3</span>&lt;div/&gt;</span><br>
+    <span class="code-html">&lt;div/&gt;</span><br><br>
+    <span class="code-language">CSS</span><br>
+    <hr class="code-line">
+    <span class="code-property">.container</span> {<br>
+    &nbsp;&nbsp;<span class="code-current-example">display</span>: <span class="code-current-example">flex</span>;<br>}
+</div>
+
+{# FLEX DIRECTION #}
+{% elif sub_concept.title == 'Flex Direction' %}
+<div class="code-block">
+    <span class="code-language">HTML</span><br>
+    <hr class="code-line">
+    <span class="code-html">&lt;div <span class="code-current-example">class="container"</span>&gt;</span><br>
+    &nbsp;<span class="code-html">&lt;div&gt;<span class="code-text">First</span>&lt;div/&gt;</span><br>
+    &nbsp;<span class="code-html">&lt;div&gt;<span class="code-text">Second</span>&lt;div/&gt;</span><br>
+    &nbsp;<span class="code-html">&lt;div&gt;<span class="code-text">Third</span>&lt;div/&gt;</span><br>
+    &nbsp;<span class="code-html">&lt;div&gt;<span class="code-text">Fourth</span>&lt;div/&gt;</span><br>
+    <span class="code-html">&lt;div/&gt;</span><br><br>
+    <span class="code-language">CSS</span><br>
+    <hr class="code-line">
+    <span class="code-property">.container</span> {<br>
+    &nbsp;&nbsp;<span class="code-current-example">display</span>: <span class="code-current-example">flex</span>;<br>
+    &nbsp;&nbsp;<span class="code-current-example">flex-direction</span>: <span id="flexDirectionValue" class="code-current-example">row</span>;<br>
+    }
+</div>
+
+{# MAIN AXIS AND CROSS AXIS #}
+{% elif sub_concept.title == 'Main Axis and Cross Axis' %}
+
+{# flex-direction:row;#}
+<div class="code-example-info">
+    <h3><code>flex-direction:row; and flex-direction:row-reverse;</code></h3>
+    <ul>
+        <li>Main Axis: Horizontal (left to right)</li>
+        <li>Cross Axis: Vertical (top to bottom)</li>
+    </ul>
+</div>
+
+<div class="code-block">
+    <span class="code-language">HTML</span><br>
+    <hr class="code-line">
+    <span class="code-html">&lt;div <span class="code-current-example">class="container"</span>&gt;</span><br>
+    &nbsp;&nbsp;<span class="code-comment">&#8592; Main Axis (horizontal) &rarr;</span><br>
+    &nbsp;<span class="code-html">&lt;div&gt;<span class="code-text">Item 1</span>&lt;div/&gt;</span>&nbsp;<span
+        class="code-comment">&#8593;</span><br>
+    &nbsp;<span class="code-html">&lt;div&gt;<span class="code-text">Item 2</span>&lt;div/&gt;</span>&nbsp;<span
+        class="code-comment">Cross Axis (vertical)</span><br>
+    &nbsp;<span class="code-html">&lt;div&gt;<span class="code-text">Item 3</span>&lt;div/&gt;</span>&nbsp;<span
+        class="code-comment">&#8595;</span><br>
+    <span class="code-html">&lt;div/&gt;</span><br><br>
+    <span class="code-language">CSS</span><br>
+    <span class="code-comment">The <code>display:flex</code> property automatically sets the main axis to horizontal
+        (row) by default, so there is no need to explicitly set <code>flex-direction:row;</code></span>
+    <hr class="code-line">
+    <span class="code-property">.container</span> {<br>
+    &nbsp;&nbsp;<span class="code-current-example">display</span>: <span class="code-current-example">flex</span>;<br>
+    &nbsp;&nbsp;<span class="code-current-example">flex-direction</span>: <span class="code-current-example">row</span>;/
+    <span class="code-current-example">flex-direction</span>: <span class="code-current-example">row-reverse</span>;
+    <br>
+    }
+</div>
+
+{# flex-direction:column;#}
+<div class="code-example-info">
+    <h3><code>flex-direction:column; and flex-direction:column-reverse;</code></h3>
+    <ul>
+        <li>Main Axis: Vertical (top to bottom)</li>
+        <li>Cross Axis: Horizontal (left to right)</li>
+    </ul>
+</div>
+<div class="code-block">
+    <span class="code-language">HTML</span><br>
+    <hr class="code-line">
+    <span class="code-html">&lt;div <span class="code-current-example">class="container"</span>&gt;</span><br>
+    &nbsp;&nbsp;<span class="code-comment">&#8592; Cross Axis (horizontal) &rarr;</span><br>
+    &nbsp;<span class="code-html">&lt;div&gt;<span class="code-text">Item 1</span>&lt;div/&gt;</span>&nbsp;<span
+        class="code-comment">&#8593;</span><br>
+    &nbsp;<span class="code-html">&lt;div&gt;<span class="code-text">Item 2</span>&lt;div/&gt;</span>&nbsp;<span
+        class="code-comment">Main Axis (vertical)</span><br>
+    &nbsp;<span class="code-html">&lt;div&gt;<span class="code-text">Item 3</span>&lt;div/&gt;</span>&nbsp;<span
+        class="code-comment">&#8595;</span><br>
+    <span class="code-html">&lt;div/&gt;</span><br><br>
+    <span class="code-language">CSS</span><br>
+    <hr class="code-line">
+    <span class="code-property">.container</span> {<br>
+    &nbsp;&nbsp;<span class="code-current-example">display</span>: <span class="code-current-example">flex</span>;<br>
+    &nbsp;&nbsp;<span class="code-current-example">flex-direction</span>: <span class="code-current-example">column</span>; /
+    <span class="code-current-example">flex-direction</span>: <span class="code-current-example">column-reverse</span>;<br><br>
+    }
+</div>
+
+{# JUSTIFY CONTENT #}
+{% elif sub_concept.title == 'Justify Content' %}
+<div class="code-example-info">
+   <h3><code>justify-content: flex-start;</code> <span>(default )</span></h3>
+    <ul>
+        <li>Centers items horizontally when <code>flex-direction: row; is set</code></li>
+        <li>Centers items vertically when <code>flex-direction: column; is set</code></li>
+    </ul>
+
+    <h3><code>justify-content: center;</code></h3>
+    <ul>
+        <li>Centers items horizontally when <code>flex-direction: row; is set</code></li>
+        <li>Centers items vertically when <code>flex-direction: column; is set</code></li>
+    </ul>
+
+     
+        <h3><code>justify-content: space-between;</code></h3>
+    <ul>
+        <li>Centers items horizontally when <code>flex-direction: row; is set</code></li>
+        <li>Centers items vertically when <code>flex-direction: column; is set</code></li>
+    </ul>
+</div>
+<div class="code-block">
+    <span class="code-language">HTML</span><br>
+    <hr class="code-line">
+    <span class="code-html">&lt;div <span class="code-current-example">class="container"</span>&gt;</span><br>
+    &nbsp;<span class="code-html">&lt;div&gt;<span class="code-text">First</span>&lt;div/&gt;</span><br>
+    &nbsp;<span class="code-html">&lt;div&gt;<span class="code-text">Second</span>&lt;div/&gt;</span><br>
+    &nbsp;<span class="code-html">&lt;div&gt;<span class="code-text">Third</span>&lt;div/&gt;</span><br>
+    &nbsp;<span class="code-html">&lt;div&gt;<span class="code-text">Fourth</span>&lt;div/&gt;</span><br>
+    <span class="code-html">&lt;div/&gt;</span><br><br>
+    <span class="code-language">CSS</span><br>
+    <hr class="code-line">
+    <span class="code-property">.container</span> {<br>
+    &nbsp;&nbsp;<span class="code-current-example">display</span>: <span class="code-current-example">flex</span>;<br>
+    &nbsp;&nbsp;<span class="code-current-example">flex-direction</span>: <span id="justifyFlexDirectionValue" class="code-current-example">row</span>;<br>
+    &nbsp;&nbsp;<span class="code-current-example">justify-content</span>: <span id="justifyContentValue" class="code-current-example">flex-start</span>;<br>
+    }
+</div>
+
+{# ALIGN ITEMS #}
+{% elif sub_concept.title == 'Align Items' %}
+<div class="code-block">
+    <span class="code-property">align-items</span>: <span class="code-value">stretch</span>; /* default */
+    <span class="code-property">align-items</span>: <span class="code-value">center</span>;
+    <span class="code-property">align-items</span>: <span class="code-value">flex-end</span>;
+</div>
+
+{# FLEX WRAP #}
+{% elif sub_concept.title == 'Flex Wrap' %}
+<div class="code-block">
+    <span class="code-property">flex-wrap</span>: <span class="code-value">nowrap</span>; /* default */
+    <span class="code-property">flex-wrap</span>: <span class="code-value">wrap</span>;
+    <span class="code-property">flex-wrap</span>: <span class="code-value">wrap-reverse</span>;
+</div>
+
+{# FLEX ITEM PROPERTIES #}
+{% elif sub_concept.title == 'Flex Item Properties' %}
+<div class="code-block">
+    <span class="code-property">flex-grow</span>: <span class="code-value">0</span>; /* default - don't grow */
+    <span class="code-property">flex-shrink</span>: <span class="code-value">1</span>; /* default - can shrink */
+    <span class="code-property">flex-basis</span>: <span class="code-value">auto</span>; /* default - based on content
+    */<br>
+    <span>/* Shorthand */</span><br>
+    <span class="code-property">flex</span>: <span class="code-value">1</span>; /* grow: 1, shrink: 1, basis: 0% */
+    <span class="code-property">flex</span>: <span class="code-value">0 1 auto</span>; /* explicit values */
+</div>
+
+{# FLEX GROW #}
+{% elif sub_concept.title == 'Flex Grow' %}
+<div class="code-block">
+    <span class="code-property">flex-grow</span>: <span class="code-value">0</span>; /* default - don't grow */
+    <span class="code-property">flex-grow</span>: <span class="code-value">1</span>; /* can grow */
+    <span class="code-property">flex-grow</span>: <span class="code-value">2</span>; /* can grow twice as much */
+</div>
+
+{# FLEX SHRINK #}
+{% elif sub_concept.title == 'Flex Shrink' %}
+<div class="code-block">
+    <span class="code-property">flex-shrink</span>: <span class="code-value">0</span>; /* default - don't shrink */
+    <span class="code-property">flex-shrink</span>: <span class="code-value">1</span>; /* can shrink */
+    <span class="code-property">flex-shrink</span>: <span class="code-value">2</span>; /* can shrink twice as much */
+</div>
+
+{# FLEX BASIS #}
+{% elif sub_concept.title == 'Flex Basis' %}
+<div class="code-block">
+    <span class="code-property">flex-basis</span>: <span class="code-value">auto</span>; /* default */
+    <span class="code-property">flex-basis</span>: <span class="code-value">100px</span>;
+    <span class="code-property">flex-basis</span>: <span class="code-value">50%</span>;
+    <span class="code-property">flex-basis</span>: <span class="code-value">content</span>;
+</div>
+
+{% else %}
+<div class="code-block">
+    NO CODE EXAMPLE AVAILABLE
+</div>
+{% endif %}

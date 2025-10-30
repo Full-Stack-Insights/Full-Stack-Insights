@@ -1,0 +1,48 @@
+    <nav class="top-nav">
+        <div class="nav-brand">
+            <span>FRONTEND INSIGHTS</span>
+        </div>
+        
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="{{ url_for('dashboard', language='html') }}" class="nav-link 
+                {% if request.view_args and request.view_args.get('language') == 'html' %}active{% endif %}">
+                    <i class="fa-brands fa-html5"></i>
+                    <span>HTML</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="{{ url_for('dashboard', language='css') }}" class="nav-link {% if request.view_args and request.view_args.get('language') == 'css' %}active{% endif %}">
+                    <i class="fa-brands fa-css3"></i>
+                    <span>CSS</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="{{ url_for('dashboard', language='javascript') }}" class="nav-link {% if request.view_args and request.view_args.get('language') == 'javascript' %}active{% endif %}">
+                    <i class="fa-brands fa-js"></i>
+                    <span>JavaScript</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="{{ url_for('dashboard', language='python') }}" class="nav-link {% if request.view_args and request.view_args.get('language') == 'python' %}active{% endif %}">
+                    <i class="fa-brands fa-python"></i>
+                    <span>Python</span>
+                </a>
+            </li>
+        </ul>
+
+        <div class="nav-profile">
+            <div class="profile-avatar">
+                <i class="fas fa-user"></i>
+            </div>
+            <div class="profile-info">
+                <span class="profile-name">
+                    <a href="{{ url_for('home') }}">FronEnd Insights</a>
+                </span>
+            </div>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>

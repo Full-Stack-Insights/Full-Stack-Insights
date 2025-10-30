@@ -1,0 +1,39 @@
+@import url('./homecss/home-banner.css');
+@import url('./homecss/home-cards.css');
+@import url('./footer.css');
+
+* {
+    box-sizing: border-box;
+}
+
+/* Reset margins and padding for common elements, but not all elements */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100%;
+}
